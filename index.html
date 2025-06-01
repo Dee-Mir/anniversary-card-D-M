@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Happy Anniversary, My Love Dyy </title>
+<style>
+  /* Brown romantic theme */
+  body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: #4b2e18;
+    color: #f4e7db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card {
+    background: #7a4f3a;
+    border-radius: 15px;
+    width: 320px;
+    padding: 30px 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    text-align: center;
+  }
+
+  h1, h2 {
+    margin: 0 0 15px 0;
+    font-weight: normal;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+    color: #f9c5a1;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  button {
+    background-color: #a9746e;
+    color: #f4e7db;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #b0887c;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .emoji {
+    font-size: 28px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- Page 1 -->
+  <div id="page1">
+    <h1>Another year, another beautiful chapter with you <span class="emoji"></span></h1>
+    <button id="toPage2Btn">Next</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="hidden">
+    <h1>Happy Anniversary, My Love Dyy <span class="emoji"></span></h1>
+    <p>
+      Happy Anniversary, my love.<br><br>
+      Every moment with you feels like magic.<br>
+      From the laughs we’ve shared to the quiet moments we cherish — you’ve become such a big part of my world.<br>
+      Here’s to everything we’ve been through and everything beautiful that’s still to come.<br><br>
+      I’m so lucky to have you.<br>
+      Thank you for being mine. <span class="emoji"></span><br><br>
+      With all my love,<br>
+      [Dee]
+    </p>
+    <h2>How long have you been together?</h2>
+    <p>12 months</p>
+    <button id="toPage3Btn">Next</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div id="page3" class="hidden">
+    <h2> Anniversary Trip Invitation </h2>
+    <p>
+      Hi Babyy,<br>
+      Let’s celebrate our love in Hatyai, Thailand this <strong>1st June 2025</strong>.<br>
+      Just you, me, good food, and beautiful memories. <span class="emoji"></span><br><br>
+      “Anywhere with you feels like paradise.”<br><br>
+      Pack your things — I’ll handle the rest. <span class="emoji"></span><br>
+      Love,<br>
+      [Dee]
+    </p>
+    <button id="okayBtn">Okay</button>
+  </div>
+
+</div>
+
+<script>
+  const page1 = document.getElementById('page1');
+  const page2 = document.getElementById('page2');
+  const page3 = document.getElementById('page3');
+
+  document.getElementById('toPage2Btn').addEventListener('click', () => {
+    page1.classList.add('hidden');
+    page2.classList.remove('hidden');
+  });
+
+  document.getElementById('toPage3Btn').addEventListener('click', () => {
+    page2.classList.add('hidden');
+    page3.classList.remove('hidden');
+  });
+
+  document.getElementById('okayBtn').addEventListener('click', () => {
+    alert("Happy Anniversary! ");
+  });
+</script>
+
+</body>
+</html>
